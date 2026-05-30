@@ -4,3 +4,7 @@ node_modules/
 .next/
 out/
 *.tsbuildinfo
+
+.vercel
+.claude/settings.local.json
+__original_prompt.txt
