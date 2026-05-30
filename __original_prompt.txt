@@ -1,0 +1,43 @@
+
+Build an webpage that takes ingredients with their nutritional information and allows the user to adjust their macro values and proportionally adjust the ingredient amounts to match the macro values selected.
+
+for database use Supabase
+for webhosting use Vercel
+
+for ingredients use a list of supermarket foods which includes macro information about protein, fat, carbs, fiber, sodium
+usda.gov is a good source for a list like this 
+
+how recipe building will work: 
+the user will select ingredients they would like to use
+the user will select the macro amounts they are trying to achieve
+the user will select the total calories the meal should contain
+automatically will adjust the grams of the ingredients to match the selected amounts, also without going over the desired calories or desired sodium
+start with adjusting grams of protein using the meat ingredient (or highest protein ingredient)
+then adjust grams of fruit or vegetable or grain (or highest carb ingredient)
+if carbs and fiber both have values selected, then try to maximize the fiber amount without exceeding the carbs, but using a proxy carb value of (carbs-fiber) which can be called Net Carbs
+then adjust grams of oil or dairy (or highest fat ingredient) to reach the calorie target
+
+allow the user to adjust the macro in real time and the recipe will update values in real time
+
+there will be Notes field to allow the user to append comments or suggestion or additional condiments or spices
+
+when the user saves the recipe, prompt for a title and then save all the receipe amounts and macro information
+the recipe will have the option to be public or private, and the user can select that at any time viewing the recipe
+
+the user will be able to view their recipes from a list, and add a picture displayed with the recipe title
+
+The website will support multiple users, with a login and password, to view their stored recipes and create or add new ones
+
+When a user is not logged in, the website will still display ingredients, and receipe building macro functionality, but only public recipes will be shown
+
+
+
+
+
+
+
+● The original request was:
+
+"create an app that takes ingredients with their nutritional information and allows the user to adjust their macro values (grams of protein, fat, and carbs) and proportionally adjust the ingredient amounts. the ingredients will be taken from a database table, and the selected combinations can be saved into a different database table"
+
+That became MacroChef — the app we've been building and deploying ever since.
